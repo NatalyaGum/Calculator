@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Practice Suite" parallel="tests" thread-count="10">
+    <listeners>
+        <listener class-name="by.epam.testautomation.calc.listener.TestListener"></listener>
+    </listeners>
+    <test  name="Calc">
+        <groups>
+            <run>
+                <include name="base"/>
+                <include name="math"/>
+                <include name="trigonometry"/>
+                <exclude name="timeout"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="by.epam.testautomation.calc.test.BaseTest"></class>
+            <class name="by.epam.testautomation.calc.test.SumLongCalculatorTest"></class>
+            <class name="by.epam.testautomation.calc.test.SumDoubleCalculatorTest"></class>
+            <class name="by.epam.testautomation.calc.test.SubLongCalculatorTest"></class>
+            <class name="by.epam.testautomation.calc.test.SubDoubleCalculatorTest"></class>
+            <class name="by.epam.testautomation.calc.test.DivDoubleCalculatorTest"></class>
+            <class name="by.epam.testautomation.calc.test.DivLongCalculatorTest"></class>
+            <class name="by.epam.testautomation.calc.test.MultLongCalculatorTest"></class>
+            <class name="by.epam.testautomation.calc.test.MultDoubleCalculatorTest"></class>
+            <class name="by.epam.testautomation.calc.test.PowTest"></class>
+            <class name="by.epam.testautomation.calc.test.SqrtTest"></class>
+            <class name="by.epam.testautomation.calc.test.CosTest"></class>
+            <class name="by.epam.testautomation.calc.test.SinTest"></class>
+            <class name="by.epam.testautomation.calc.test.TgTest"></class>
+            <class name="by.epam.testautomation.calc.test.CtgTest"></class>
+            <class name="by.epam.testautomation.calc.test.IsNegativeTest"></class>
+            <class name="by.epam.testautomation.calc.test.IsPositiveTest"></class>
+            <class name="by.epam.testautomation.calc.test.TimeoutTest"></class>
+        </classes>
+    </test>
+</suite>
