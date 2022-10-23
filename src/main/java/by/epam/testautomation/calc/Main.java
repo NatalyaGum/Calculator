@@ -1,4 +1,4 @@
-package by.epam.test.calc;
+package by.epam.testautomation.calc;
 
 public class Main {
     public static void main(String[] args) {
