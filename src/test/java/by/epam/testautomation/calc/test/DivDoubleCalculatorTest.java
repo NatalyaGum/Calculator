@@ -21,10 +21,8 @@ public class DivDoubleCalculatorTest extends BaseTest{
         double result=calculator.div(a,b);
         Assert.assertEquals(result,expectedValue);
     }
-
     @Test(expectedExceptions = NumberFormatException.class)
     public void testExceptionDiv() {
         double result=calculator.div(1.5,0.0);
     }
-
 }

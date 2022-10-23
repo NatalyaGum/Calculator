@@ -16,10 +16,10 @@ public class TimeoutTest {
         timeout = new Timeout();
     }
 
-    @DataProvider(name="valuesForTest")
-    public Object [][] values(){
-        return new Object [][]{
-                {2},
+    @DataProvider(name = "valuesForTest")
+    public Object[][] values() {
+        return new Object[][]{
+                {-2},
                 {0},
                 {5}
         };
@@ -30,7 +30,7 @@ public class TimeoutTest {
         long startTime = System.nanoTime();
         timeout.sleep(time);
         long actualTime = TimeUnit.NANOSECONDS.toSeconds(System.nanoTime() - startTime);
-        Assert.assertEquals(actualTime,time);
+        Assert.assertEquals(actualTime, time);
     }
 
     @AfterMethod

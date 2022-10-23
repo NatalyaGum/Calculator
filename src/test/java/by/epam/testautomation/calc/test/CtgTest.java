@@ -4,28 +4,29 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-@Test(groups= "trigonometry")
+@Test(groups = "trigonometry")
 public class CtgTest extends BaseTest {
 
-    @DataProvider(name="valuesForTest")
-    public Object [][] values(){
-        return new Object [][]{
-                {Math.PI/4, 1},
-                {Math.PI/2, 0},
-                {Math.PI/6, 1.73205}
+    @DataProvider(name = "valuesForTest")
+    public Object[][] values() {
+        return new Object[][]{
+                {Math.PI / 4, 1},
+                {Math.PI / 2, 0},
+                {Math.PI / 6, 1.73205}
         };
     }
+
     @Test(dataProvider = "valuesForTest")
     public void testCtg(double a, double expectedValue) {
-        double result=calculator.ctg(a);
-        Assert.assertEquals(result,expectedValue);
+        double result = calculator.ctg(a);
+        Assert.assertEquals(result, expectedValue);
     }
 
-    @DataProvider (name="valuesForExceptionTest")
-    public Object [][] value(){
-        return new Object [][]{
+    @DataProvider(name = "valuesForExceptionTest")
+    public Object[][] value() {
+        return new Object[][]{
                 {Math.PI},
-                {0,0}
+                {0, 0}
         };
     }
 

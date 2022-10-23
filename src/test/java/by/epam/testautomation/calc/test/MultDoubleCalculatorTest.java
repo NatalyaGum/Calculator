@@ -21,6 +21,4 @@ public class MultDoubleCalculatorTest extends BaseTest{
         double result=calculator.mult(a,b);
         Assert.assertEquals(result,expectedValue);
     }
-
-
 }

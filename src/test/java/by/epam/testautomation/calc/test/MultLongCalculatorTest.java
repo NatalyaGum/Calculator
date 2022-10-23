@@ -22,6 +22,4 @@ public Object [][] values(){
         long result=calculator.mult(a,b);
         Assert.assertEquals(result,expectedValue);
     }
-
-
 }
