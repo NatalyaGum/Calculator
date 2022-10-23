@@ -30,7 +30,7 @@ public class TgTest extends BaseTest {
         };
     }
 
-    @Test(dataProvider = "valuesForExceptionTest", expectedExceptions = NumberFormatException.class, expectedExceptionsMessageRegExp = "Attempt to divide by zero")
+    @Test(dataProvider = "valuesForExceptionTest", expectedExceptions = NumberFormatException.class)
     public void testExceptionTg(double a) {
         calculator.tg(a);
     }

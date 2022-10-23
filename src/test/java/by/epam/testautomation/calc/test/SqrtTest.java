@@ -13,6 +13,7 @@ public class SqrtTest extends BaseTest {
                 {4.5, 2.1213203435596424},
                 {4.0, 2},
                 {0, 0.0}
+
         };
     }
 
@@ -29,7 +30,7 @@ public class SqrtTest extends BaseTest {
         };
     }
 
-    @Test(dataProvider = "valuesForExceptionTest", expectedExceptions = NumberFormatException.class, expectedExceptionsMessageRegExp = "Attempt to divide by zero")
+    @Test(dataProvider = "valuesForExceptionTest", expectedExceptions = NumberFormatException.class)
     public void testExceptionSqrt(double a) {
         calculator.sqrt(a);
     }

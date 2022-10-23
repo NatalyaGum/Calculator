@@ -30,7 +30,7 @@ public class CtgTest extends BaseTest {
         };
     }
 
-    @Test(dataProvider = "valuesForExceptionTest", expectedExceptions = NumberFormatException.class, expectedExceptionsMessageRegExp = "Attempt to divide by zero")
+    @Test(dataProvider = "valuesForExceptionTest", expectedExceptions = NumberFormatException.class)
     public void testExceptionCtg(double a) {
         calculator.ctg(a);
     }

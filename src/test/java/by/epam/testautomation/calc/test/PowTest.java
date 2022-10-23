@@ -13,6 +13,7 @@ public class PowTest extends BaseTest {
                 {-1.5, 1, -1.5},
                 {5.0, 1.5, 11.18},
                 {1.5, 0, 1}
+
         };
     }
 
@@ -29,7 +30,7 @@ public class PowTest extends BaseTest {
         };
     }
 
-    @Test(dataProvider = "valuesForExceptionTest", expectedExceptions = NumberFormatException.class, expectedExceptionsMessageRegExp = "Attempt to divide by zero")
+    @Test(dataProvider = "valuesForExceptionTest", expectedExceptions = NumberFormatException.class)
     public void testExceptionPow(double a, double b) {
         calculator.pow(a, b);
     }
